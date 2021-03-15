@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-// import styles from "./Buttom.module"; // Import css modules stylesheet as styles
 
-class Button extends Component {
+class Button extends React.Component {
   render() {
-    return <button>Error Button</button>;
+    return <button onClick={this.handleClick.bind(this)}>Error Button</button>;
+  }
+  handleClick(e) {
+    e.preventDefault();
+    console.log(this);
+    console.log("The link was clicked.");
   }
 }
 
